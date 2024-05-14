@@ -36,15 +36,16 @@ const formUser = ({ createUser, userSelected, updateUser, setUserSelected, formI
       birthday: "",
     });
     setUserSelected();
+
   }
 
 
 
+
+
   return (
-    <div className={`w-[25rem] rounded-2xl bg-slate-800 m-2 p-2 min-w-[20rem] h-auto transition-all ${formIsOpen ? 'fixed' : 'hidden'}`}>
-      
-      
-     
+    <div className={`w-[25rem] rounded-2xl bg-slate-800 m-2 p-2 min-w-[20rem]  transition-all ${formIsOpen ? 'fixed' : 'hidden'}`}>
+    
       <section className="text-xl font-mono text-slate-100 text-wrap text-justify flex flex-row" >
         <p className=" text-center text-gray-400">Form users</p>
       <button onClick={handleClose} className="w-8 h-8 text-xl bg-blue-500 rounded-full text-center justify-end relative bottom-1 left-60 top-2 hover:bg-red-800">X</button>

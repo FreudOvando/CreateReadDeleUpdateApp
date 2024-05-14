@@ -1,10 +1,11 @@
 import React from "react";
 
-const Users = ({ user, deleteUser, setUserSelected, setformIsOpen }) => {
+const Users = ({ user, deleteUser, setUserSelected, setformIsOpen, deleteMessage, setDeleteMessage }) => {
   
     const handleDelete = () => {
         deleteUser(user.id);
-    }
+    
+      }
 
     const handleEdit = () => {
         setUserSelected(user)
@@ -13,6 +14,8 @@ const Users = ({ user, deleteUser, setUserSelected, setformIsOpen }) => {
   
     return (
     <div className="bg-gray-700 text-gray-400 shadow-xl shadow-black rounded-lg w-[20rem] h-auto m-2 p-2">
+      
+    
       <h3 className="font-mono text-2xl text-start p-1">
       Name:   {user.first_name} {user.last_name} 
       </h3>

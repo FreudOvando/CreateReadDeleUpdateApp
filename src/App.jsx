@@ -12,7 +12,12 @@ function App() {
   
   const  [ users , getUsers, createUser, deleteUser, updateUser ] =  UseCrud('/users/')
   
-  const [formIsOpen, setformIsOpen] = useState(false)
+  const [formIsOpen, setformIsOpen] = useState(false);
+
+const [deleteMessage, setDeleteMessage] = useState(false);
+
+
+
   
 
   useEffect(() => {
@@ -27,9 +32,9 @@ const handleOpen = () => {
   return (
    
    
-   <div className='w-auto h-auto flex justify-center items-center min-w-[390px] flex-col'>
+   <div className='w-auto flex justify-center items-center min-w-[390px]  flex-col'>
     <header className='w-auto h-auto m-2 p-2 bg-slate-600 rounded-2xl shadow-2xl shadow-slate-700 items-center justify-center flex flex-row'>
-      <p className='text-center text-xl text-lime-100 m-2 p-2'>Create new USER</p>
+      <p className='text-center text-xl text-lime-100 m-2 p-2 cursor-pointer hover:text-green-400'>Create new USER</p>
         <button onClick={handleOpen} 
           className="group cursor-pointer outline-none hover:rotate-90 duration-300"
           title="Add New"
@@ -51,7 +56,7 @@ const handleOpen = () => {
         </button>
       </header>
 
-< FormUser
+< FormUser 
 createUser={createUser}
 userSelected={userSelected}
 updateUser={updateUser}
@@ -60,7 +65,7 @@ formIsOpen={formIsOpen}
 setformIsOpen={setformIsOpen}
 />
 
-<div className='grid grid-cols-2 gap-2 max-sm:grid-cols-1'>
+<div className='grid grid-cols-2 gap-2 max-sm:grid-cols-1 h-[100vh]'>
   {
     users?.map(user => (
       <Users 
@@ -69,6 +74,8 @@ setformIsOpen={setformIsOpen}
       deleteUser={deleteUser}
       setUserSelected={setUserSelected}
       setformIsOpen={setformIsOpen}
+      deleteMessage={deleteMessage}
+      setDeleteMessage={setDeleteMessage}
         />
     ))
   }
