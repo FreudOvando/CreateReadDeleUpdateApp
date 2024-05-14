@@ -13,7 +13,7 @@ const Users = ({ user, deleteUser, setUserSelected, setformIsOpen, deleteMessage
     }
   
     return (
-    <div className="bg-gray-700 text-gray-400 shadow-xl shadow-black rounded-lg w-[20rem] h-[20rem] m-2 p-2">
+    <div className="bg-gray-700 text-gray-400 shadow-xl shadow-black rounded-lg w-[20rem] h-[15rem] m-2 p-2">
       
     
       <h3 className="font-mono text-2xl text-start p-1">
